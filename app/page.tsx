@@ -5,24 +5,16 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
-      label: 'Story time',
-    },
-    {
-      action: 'tx',
-      label: 'Send Base Sepolia',
-      target: `${NEXT_PUBLIC_URL}/api/tx`,
-      postUrl: `${NEXT_PUBLIC_URL}/api/tx-success`,
+      action: 'link',
+      label: 'Link to Google',
+      target: 'https://www.google.com',
     },
   ],
   image: {
     src: `${NEXT_PUBLIC_URL}/park-3.png`,
     aspectRatio: '1:1',
   },
-  input: {
-    text: 'Tell me a story',
-  },
-  postUrl: `${NEXT_PUBLIC_URL}/api/frame`,
-});
+});;
 
 export const metadata: Metadata = {
   title: 'silvio.xyz',
@@ -40,7 +32,7 @@ export const metadata: Metadata = {
 export default function Page() {
   return (
     <>
-      <h1>zizzamia.xyz</h1>
+      <h1>silvio.xyz</h1>
     </>
   );
 }
