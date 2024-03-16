@@ -1,11 +1,16 @@
-import { FrameRequest, getFrameMessage } from '@coinbase/onchainkit/frame';
+import { FrameRequest, getFrameMessage, getFrameHtmlResponse } from '@coinbase/onchainkit/frame';
 import { NextRequest, NextResponse } from 'next/server';
-import { encodeFunctionData, parseEther } from 'viem';
+import { encodeFunctionData, formatEther, parseEther } from 'viem';
 import { base } from 'viem/chains';
+import type { FrameTransactionResponse } from '@coinbase/onchainkit/frame';
+import ClickTheButtonABI from '../../_contracts/ClickTheButtonABI';
+import { CLICK_THE_BUTTON_CONTRACT_ADDR } from '../../config';
 import BuyMeACoffeeABI from '../../_contracts/BuyMeACoffeeABI';
 import { BUY_MY_COFFEE_CONTRACT_ADDR } from '../../config';
-import type { FrameTransactionResponse } from '@coinbase/onchainkit/frame';
 
+
+
+/*
 async function getResponse(req: NextRequest): Promise<NextResponse | Response> {
   const body: FrameRequest = await req.json();
   const { isValid } = await getFrameMessage(body, { neynarApiKey: 'NEYNAR_ONCHAIN_KIT' });
@@ -38,3 +43,4 @@ export async function POST(req: NextRequest): Promise<Response> {
 }
 
 export const dynamic = 'force-dynamic';
+*/

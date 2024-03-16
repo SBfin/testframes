@@ -5,24 +5,33 @@ import { NEXT_PUBLIC_URL } from './config';
 const frameMetadata = getFrameMetadata({
   buttons: [
     {
+      action: 'tx',
+      label: 'Click the Button',
+      target: `${NEXT_PUBLIC_URL}/api/buttonclicker`,
+    },
+    {
       action: 'link',
-      label: 'Link to Google',
-      target: 'https://www.google.com',
+      label: 'Leaderboard',
+      target: `${NEXT_PUBLIC_URL}/buttonclicker`,
     },
   ],
   image: {
-    src: `${NEXT_PUBLIC_URL}/park-3.png`,
+    src: `${NEXT_PUBLIC_URL}/button.webp`,
     aspectRatio: '1:1',
   },
-});;
+  input: {
+    text: "Don't click the button!",
+  },
+  postUrl: `${NEXT_PUBLIC_URL}/api/aftertx`,
+});
 
 export const metadata: Metadata = {
-  title: 'silvio.xyz',
-  description: 'LFG',
+  title: 'Click the Button',
+  description: "Don't click the button!",
   openGraph: {
-    title: 'silvio.xyz',
-    description: 'LFG',
-    images: [`${NEXT_PUBLIC_URL}/park-1.png`],
+    title: 'Click the Button',
+    description: "Don't click the button!",
+    images: [`${NEXT_PUBLIC_URL}/button.webp`],
   },
   other: {
     ...frameMetadata,
